@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+$cor-fundo-2: #FFFFFF;
+$cor-fundo-1: #EEEEEE;
+$cor-primaria: #DCE775;
+$cor-secundaria: #33691E;
+$cor-fonte:#333;
+$max-width:960px;
+
+$font-engracada: 'Indie Flower', cursive;
+$font-normal: sans-serif;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	
+	padding: 0;
+	margin: 0;
+	background-color: $cor-fundo-1;
+	color: $cor-fonte;
+	font-family: $font-normal;
+
+	header {
+		font-family: $font-engracada;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		color: #FFF;
+		font-size: 3rem;
+		line-height: 3rem;
+		text-align: center;
+		padding: 20px;
+		text-shadow: 2px 2px 1px #000;
+		&::before {
+			content:'';
+			background-image: url('../img/top-bg.jpg');
+			position: absolute;
+			width:100%;
+			height:100%;
+			background-position: center 0;
+			background-size: 800px auto;
+			filter: brightness(50%) grayscale(100%);
+			z-index: -1;
+		}
+	}
+
+	nav {
+		background-color: $cor-primaria;
+		display: flex;
+		justify-content: center;
+		overflow-y: hidden;
+
+		ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: block;
+
+					a {
+						display: block;
+						padding: 10px 20px;
+						text-decoration: none;
+						color:$cor-secundaria;
+						text-align: center;
+
+						&:hover {
+							background-color: $cor-secundaria;
+							color:#FFF;
+						}
+					}
+				}
+				
+		}
+	}
+
+	section {
+		margin: 0 auto;
+		max-width: $max-width;
+		article {
+			background-color: $cor-fundo-2;
+			padding: 20px;
+			text-align: center;
+
+			i {
+				font-size: 48px !important;
+			}
+
+		}
+	}
+
+	.imagem {
+		background-image: url(../img/top-bg.jpg);
+		background-attachment: fixed;
+		background-size: auto 100vh;
+		height: 280px;
+		background-position: center 0;
+		transition:  background-size 6s linear;
+		&:hover{
+			background-size: auto 110vh;
+		}
+	}
+
+	.depoimento {
+		
+		font-family: $font-engracada;
+		
+		padding: 20px;
+		max-width: $max-width;
+
+		div {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+
+		span {
+			display: block;
+			text-align: right;
+			font-weight: bold;
+		}
+	}
+
+	footer {
+
+		div {
+			max-width: $max-width;
+		}
+		background-color: $cor-primaria;
+		padding: 20px;
+		div:first-child {
+			margin-bottom:20px;
+		}
+	}
+
+	
+}
+
+@media (min-width:640px){
+	body {
+
+		nav {
+			display: block;
+			justify-content: unset;
+			overflow-y: hidden;
+	
+			ul {
+				max-width: $max-width;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				li {
+					display: inline-block;
+	
+					a {
+						display: inline-block;
+					}
+				}
+					
+			}
+		}
+	
+		.calls {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 0;
+			article {
+				width:calc(33% - 10px);
+				border-radius: 10px;
+			}
+		}
+	
+		footer {
+			section {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+	}
+}

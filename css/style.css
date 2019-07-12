@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
+  color: #333;
+  font-family: sans-serif; }
+  body header {
+    font-family: "Indie Flower", cursive;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #FFF;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 2px 2px 1px #000; }
+    body header::before {
+      content: '';
+      background-image: url("../img/top-bg.jpg");
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center 0;
+      background-size: 800px auto;
+      filter: brightness(50%) grayscale(100%);
+      z-index: -1; }
+  body nav {
+    background-color: #DCE775;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden; }
+    body nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      body nav ul li {
+        display: block; }
+        body nav ul li a {
+          display: block;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #33691E;
+          text-align: center; }
+          body nav ul li a:hover {
+            background-color: #33691E;
+            color: #FFF; }
+  body section {
+    margin: 0 auto;
+    max-width: 960px; }
+    body section article {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center; }
+      body section article i {
+        font-size: 48px !important; }
+  body .imagem {
+    background-image: url(../img/top-bg.jpg);
+    background-attachment: fixed;
+    background-size: auto 100vh;
+    height: 280px;
+    background-position: center 0;
+    transition: background-size 6s linear; }
+    body .imagem:hover {
+      background-size: auto 110vh; }
+  body .depoimento {
+    font-family: "Indie Flower", cursive;
+    padding: 20px;
+    max-width: 960px; }
+    body .depoimento div {
+      text-align: center;
+      font-size: 1.5rem; }
+    body .depoimento span {
+      display: block;
+      text-align: right;
+      font-weight: bold; }
+  body footer {
+    background-color: #DCE775;
+    padding: 20px; }
+    body footer div {
+      max-width: 960px; }
+    body footer div:first-child {
+      margin-bottom: 20px; }
+
+@media (min-width: 640px) {
+  body nav {
+    display: block;
+    justify-content: unset;
+    overflow-y: hidden; }
+    body nav ul {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; }
+      body nav ul li {
+        display: inline-block; }
+        body nav ul li a {
+          display: inline-block; }
+  body .calls {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0; }
+    body .calls article {
+      width: calc(33% - 10px);
+      border-radius: 10px; }
+  body footer section {
+    display: flex;
+    justify-content: space-between; } }
+
+/*# sourceMappingURL=style.css.map */
